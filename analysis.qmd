@@ -2,5 +2,20 @@
 title: "Adult Census Income"
 author: "Harshil Kurapati"
 format: html
+execute: 
+  echo: false    
+  warning: false 
+  message: false 
 ---
+
+```{r}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(primer.data)
+  library(brms)
+  library(tidybayes)
+  library(gtsummary)
+  library(ggridges)
+})
+```
 
