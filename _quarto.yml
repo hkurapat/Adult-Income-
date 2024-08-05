@@ -1,0 +1,25 @@
+project:
+  type: website
+  title: "Income Prediction Based on Race and Gender"
+
+website:
+  title: "Income Prediction Based on Race and Gender"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Visual Analysis"
+        href: 01-modeling.qmd
+      - text: "Sources"
+        href: 02-modeling.qmd
+      - text: "About"
+        href: 03-modeling.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

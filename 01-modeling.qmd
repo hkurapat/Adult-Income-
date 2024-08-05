@@ -33,19 +33,6 @@ data <- data %>%
 ```
 
 
-```{r}
-# Bayesian logistic regression model
-model1 <- brm(income_numeric ~ race + sex, 
-              data = data, 
-              family = bernoulli(), 
-              chains = 4, 
-              iter = 4000, 
-              control = list(adapt_delta = 0.95),
-              seed = 123)
 
-# Summary of the model
-summary(model1)
-
-```
 
 

@@ -1,28 +1,30 @@
 ---
-title: "Bayesian Modeling"
+title: "Sources"
+author: "Harshil Kurapati"
 format: html
+execute: 
+  echo: false    
+  warning: false 
+  message: false 
 ---
 
-```{r}
-# Load necessary libraries
-library(brms)
+## Sources
 
-# Convert variables to factors for modeling
-data$race <- as.factor(data$race)
-data$sex <- as.factor(data$sex)
-data$income <- ifelse(data$income == "<=50K", 0, 1)
+### Data Source
 
-# Fit the Bayesian model
-fit_income <- brm(
-  formula = income ~ race + sex, 
-  data = data, 
-  family = bernoulli(), 
-  refresh = 0, 
-  silent = 2, 
-  seed = 9
-)
+The dataset used in this analysis is the **Adult Census Income** dataset, which can be found on Kaggle. This dataset includes demographic information and income levels for adults in the United States. It was originally extracted from the 1994 Census database.
 
-# Show the fixed effects
-fixef(fit_income)
-```
+### Dataset Details
 
+- **Title**: Adult Census Income
+- **Source**: Kaggle
+- **Link**: [Adult Census Income Dataset on Kaggle](https://www.kaggle.com/datasets/lovishbansal123/adult-census-income)
+- **Description**: The dataset includes the following variables: age, workclass, education, marital status, occupation, relationship, race, sex, hours per week, native country, and income level. The primary goal is to predict whether an individual's income exceeds $50K per year based on these attributes.
+- **Usage**: This dataset was used to explore the impact of race and gender on income and to build predictive models to estimate income levels.
+
+### Citation
+
+If you use this dataset in your work, please cite it as follows:
+
+
+Bansal, Lovish. "Adult Census Income." Kaggle, 2020. https://www.kaggle.com/datasets/lovishbansal123/adult-census-income.

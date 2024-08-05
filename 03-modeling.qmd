@@ -1,5 +1,5 @@
 ---
-title: "Sources"
+title: "About"
 author: "Harshil Kurapati"
 format: html
 execute: 
@@ -8,23 +8,45 @@ execute:
   message: false 
 ---
 
-## Sources
+## About This Project
 
-### Data Source
+This website explores the impact of race and gender on income using the Adult Census Income dataset. The data provides insights into how various demographic factors influence income levels.
 
-The dataset used in this analysis is the **Adult Census Income** dataset, which can be found on Kaggle. This dataset includes demographic information and income levels for adults in the United States. It was originally extracted from the 1994 Census database.
+### Project Overview
 
-### Dataset Details
+The objective of this project is to analyze and visualize the data to uncover patterns and insights into income distribution across different races and genders. The following sections cover:
 
-- **Title**: Adult Census Income
-- **Source**: Kaggle
-- **Link**: [Adult Census Income Dataset on Kaggle](https://www.kaggle.com/datasets/lovishbansal123/adult-census-income)
-- **Description**: The dataset includes the following variables: age, workclass, education, marital status, occupation, relationship, race, sex, hours per week, native country, and income level. The primary goal is to predict whether an individual's income exceeds $50K per year based on these attributes.
-- **Usage**: This dataset was used to explore the impact of race and gender on income and to build predictive models to estimate income levels.
+- **Home**: Introduction to the website and an overview of the project with examples and visuals.
+- **Visual Analysis**: Methods used to analyze the data with various models and visualizations.
+- **Sources**: Information about the origin of the data and its contents.
+- **About**: Details about the project and the author.
 
-### Citation
+### About the Dataset
 
-If you use this dataset in your work, please cite it as follows:
+The dataset contains demographic information and income levels for adults in the United States. It includes the following columns:
 
+- **age**: Age of the individual
+- **workclass**: Type of work (e.g., Private, Self-emp-not-inc, etc.)
+- **fnlwgt**: Final weight, used for statistical adjustments
+- **education**: Highest level of education achieved
+- **education-num**: Number of years of education
+- **marital-status**: Marital status of the individual
+- **occupation**: Type of occupation
+- **relationship**: Relationship status (e.g., Husband, Not-in-family, etc.)
+- **race**: Race of the individual
+- **sex**: Gender of the individual
+- **capital-gain**: Capital gains
+- **capital-loss**: Capital losses
+- **hours-per-week**: Hours worked per week
+- **native-country**: Country of origin
+- **income**: Income level (<=50K or >50K)
 
-Bansal, Lovish. "Adult Census Income." Kaggle, 2020. https://www.kaggle.com/datasets/lovishbansal123/adult-census-income.
+### About the Author
+
+I’m Harshil Kurapati, a rising senior in high school with a passion for data science. This project is part of my exploration into demographic data and aims to provide valuable insights into the factors affecting income levels.
+
+You can find more about my work on [GitHub](https://github.com/hkurapat) or reach out to me via email at ckurapat@gmail.com.
+
+### Acknowledgements
+
+This project was created as a part of [Kane’s Data Science Bootcamp](https://bootcamp.davidkane.info), where I learned essential skills in data analysis and visualization to tackle real-world challenges.
