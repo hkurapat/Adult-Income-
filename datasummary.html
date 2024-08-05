@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harshil Kurapati">
 
-<title>Income Prediction Based on Race and Gender</title>
+<title>Data Summary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,16 +23,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="analysis_files/libs/clipboard/clipboard.min.js"></script>
-<script src="analysis_files/libs/quarto-html/quarto.js"></script>
-<script src="analysis_files/libs/quarto-html/popper.min.js"></script>
-<script src="analysis_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="analysis_files/libs/quarto-html/anchor.min.js"></script>
-<link href="analysis_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="analysis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="analysis_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="analysis_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="analysis_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="datasummary_files/libs/clipboard/clipboard.min.js"></script>
+<script src="datasummary_files/libs/quarto-html/quarto.js"></script>
+<script src="datasummary_files/libs/quarto-html/popper.min.js"></script>
+<script src="datasummary_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="datasummary_files/libs/quarto-html/anchor.min.js"></script>
+<link href="datasummary_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="datasummary_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="datasummary_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="datasummary_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="datasummary_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -46,19 +45,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Income Prediction Based on Race and Gender</h1>
+<h1 class="title">Data Summary</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Harshil Kurapati </p>
-          </div>
-  </div>
     
   
     
@@ -69,27 +62,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This project explores the impact of race and gender on income using a Bayesian Regression Model. By examining these demographic factors, we can gain insights into how they influence income levels.</p>
-</section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>The dataset contains demographic information such as race, gender, age, education, and income level. We will focus on race and gender as key predictors of income, applying a Bayesian Regression Model to estimate the relationship.</p>
-</section>
-<section id="visualization" class="level2">
-<h2 class="anchored" data-anchor-id="visualization">Visualization</h2>
-<p>The following ridge plot shows the distribution of income by race and gender, with overlaid median income levels to provide a point of reference for comparison.</p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="analysis_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="cell-output cell-output-stdout">
+<pre><code>      age         workclass             fnlwgt         education        
+ Min.   :17.00   Length:32561       Min.   :  12285   Length:32561      
+ 1st Qu.:28.00   Class :character   1st Qu.: 117827   Class :character  
+ Median :37.00   Mode  :character   Median : 178356   Mode  :character  
+ Mean   :38.58                      Mean   : 189778                     
+ 3rd Qu.:48.00                      3rd Qu.: 237051                     
+ Max.   :90.00                      Max.   :1484705                     
+ education.num   marital.status      occupation        relationship      
+ Min.   : 1.00   Length:32561       Length:32561       Length:32561      
+ 1st Qu.: 9.00   Class :character   Class :character   Class :character  
+ Median :10.00   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :10.08                                                           
+ 3rd Qu.:12.00                                                           
+ Max.   :16.00                                                           
+     race               sex             capital.gain    capital.loss   
+ Length:32561       Length:32561       Min.   :    0   Min.   :   0.0  
+ Class :character   Class :character   1st Qu.:    0   1st Qu.:   0.0  
+ Mode  :character   Mode  :character   Median :    0   Median :   0.0  
+                                       Mean   : 1078   Mean   :  87.3  
+                                       3rd Qu.:    0   3rd Qu.:   0.0  
+                                       Max.   :99999   Max.   :4356.0  
+ hours.per.week  native.country        income         
+ Min.   : 1.00   Length:32561       Length:32561      
+ 1st Qu.:40.00   Class :character   Class :character  
+ Median :40.00   Mode  :character   Mode  :character  
+ Mean   :40.44                                        
+ 3rd Qu.:45.00                                        
+ Max.   :99.00                                        </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 15
+    age workclass fnlwgt education    education.num marital.status occupation   
+  &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;                &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;        
+1    90 ?          77053 HS-grad                  9 Widowed        ?            
+2    82 Private   132870 HS-grad                  9 Widowed        Exec-manager…
+3    66 ?         186061 Some-college            10 Widowed        ?            
+4    54 Private   140359 7th-8th                  4 Divorced       Machine-op-i…
+5    41 Private   264663 Some-college            10 Separated      Prof-special…
+6    34 Private   216864 HS-grad                  9 Divorced       Other-service
+# ℹ 8 more variables: relationship &lt;chr&gt;, race &lt;chr&gt;, sex &lt;chr&gt;,
+#   capital.gain &lt;dbl&gt;, capital.loss &lt;dbl&gt;, hours.per.week &lt;dbl&gt;,
+#   native.country &lt;chr&gt;, income &lt;chr&gt;</code></pre>
 </div>
 </div>
-</div>
-</section>
 
 </main>
 <!-- /main column -->
