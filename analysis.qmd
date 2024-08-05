@@ -32,7 +32,7 @@ The dataset contains demographic information such as race, gender, age, educatio
 The following ridge plot shows the distribution of income by race and gender, with overlaid median income levels to provide a point of reference for comparison.
 
 ```{r}
-
+#|cache: true
 # Load libraries
 library(tidyverse)
 library(ggridges)

@@ -1,5 +1,6 @@
 ---
-title: "Data Summary"
+title: "Visual Analysis"
+author: "Harshil Kurapati"
 format: html
 execute: 
   echo: false    
@@ -7,17 +8,44 @@ execute:
   message: false 
 ---
 
-```{r}
-# Load necessary libraries
-library(tidyverse)
+## Visual Analysis
 
-# Load the data
-data <- read_csv("adult.csv")
+In this section, we explore various models and visualizations to understand the impact of race and gender on income.
 
-# Summarize the data
-summary(data)
+```{r setup, include=FALSE}
+#| cache: true
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(brms)
+  library(tidybayes)
+  library(ggridges)
+})
 
-# Display the first few rows
-head(data)
+# Load the dataset
+data <- read_csv('adult.csv')
+
+# Data preparation
+data <- data %>%
+  mutate(income = ifelse(income == " <=50K", "Less than 50K", "More than 50K"),
+         income_numeric = ifelse(income == "Less than 50K", 0, 1),
+         race = factor(race, levels = c("White", "Black", "Asian-Pac-Islander", "Amer-Indian-Eskimo", "Other")),
+         sex = factor(sex, levels = c("Male", "Female")))
 ```
+
+
+```{r}
+# Bayesian logistic regression model
+model1 <- brm(income_numeric ~ race + sex, 
+              data = data, 
+              family = bernoulli(), 
+              chains = 4, 
+              iter = 4000, 
+              control = list(adapt_delta = 0.95),
+              seed = 123)
+
+# Summary of the model
+summary(model1)
+
+```
+
 

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Harshil Kurapati">
 
-<title>Visual Analysis</title>
+<title>Sources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,16 +24,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="datasummary_files/libs/clipboard/clipboard.min.js"></script>
-<script src="datasummary_files/libs/quarto-html/quarto.js"></script>
-<script src="datasummary_files/libs/quarto-html/popper.min.js"></script>
-<script src="datasummary_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="datasummary_files/libs/quarto-html/anchor.min.js"></script>
-<link href="datasummary_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="datasummary_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="datasummary_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="datasummary_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="datasummary_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="03-modeling_files/libs/clipboard/clipboard.min.js"></script>
+<script src="03-modeling_files/libs/quarto-html/quarto.js"></script>
+<script src="03-modeling_files/libs/quarto-html/popper.min.js"></script>
+<script src="03-modeling_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="03-modeling_files/libs/quarto-html/anchor.min.js"></script>
+<link href="03-modeling_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="03-modeling_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="03-modeling_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="03-modeling_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="03-modeling_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Visual Analysis</h1>
+<h1 class="title">Sources</h1>
 </div>
 
 
@@ -69,16 +69,27 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="visual-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="visual-analysis">Visual Analysis</h2>
-<p>In this section, we delve deeper into the visualizations that help us understand the distribution of income across different races and genders.</p>
-<section id="ridge-plot-of-income-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="ridge-plot-of-income-distribution">Ridge Plot of Income Distribution</h3>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
+<p>The dataset used in this analysis is the <strong>Adult Census Income</strong> dataset, which can be found on Kaggle. This dataset includes demographic information and income levels for adults in the United States. It was originally extracted from the 1994 Census database.</p>
 </section>
+<section id="dataset-details" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-details">Dataset Details</h3>
+<ul>
+<li><strong>Title</strong>: Adult Census Income</li>
+<li><strong>Source</strong>: Kaggle</li>
+<li><strong>Link</strong>: <a href="https://www.kaggle.com/datasets/lovishbansal123/adult-census-income">Adult Census Income Dataset on Kaggle</a></li>
+<li><strong>Description</strong>: The dataset includes the following variables: age, workclass, education, marital status, occupation, relationship, race, sex, hours per week, native country, and income level. The primary goal is to predict whether an individual’s income exceeds $50K per year based on these attributes.</li>
+<li><strong>Usage</strong>: This dataset was used to explore the impact of race and gender on income and to build predictive models to estimate income levels.</li>
+</ul>
 </section>
-<section id="ridge-plot-of-income-distribution-1" class="level1">
-<h1>Ridge plot of income distribution</h1>
-<p>ggplot(data, aes(x = income, y = race, fill = ..x..)) + geom_density_ridges_gradient(scale = 3, rel_min_height = 0.01) + facet_wrap(~ sex) + scale_fill_viridis_c(option = “C”) + labs(title = “Income Distribution by Race and Gender”, x = “Income”, y = “Race”) + theme_minimal()</p>
+<section id="citation" class="level3">
+<h3 class="anchored" data-anchor-id="citation">Citation</h3>
+<p>If you use this dataset in your work, please cite it as follows:</p>
+<p>```plaintext Bansal, Lovish. “Adult Census Income.” Kaggle, 2020. https://www.kaggle.com/datasets/lovishbansal123/adult-census-income.</p>
+</section>
 </section>
 
 </main>
