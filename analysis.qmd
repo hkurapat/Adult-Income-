@@ -1,0 +1,6 @@
+---
+title: "Adult Census Income"
+author: "Harshil Kurapati"
+format: html
+---
+
