@@ -1,0 +1,28 @@
+---
+title: "Bayesian Modeling"
+format: html
+---
+
+```{r}
+# Load necessary libraries
+library(brms)
+
+# Convert variables to factors for modeling
+data$race <- as.factor(data$race)
+data$sex <- as.factor(data$sex)
+data$income <- ifelse(data$income == "<=50K", 0, 1)
+
+# Fit the Bayesian model
+fit_income <- brm(
+  formula = income ~ race + sex, 
+  data = data, 
+  family = bernoulli(), 
+  refresh = 0, 
+  silent = 2, 
+  seed = 9
+)
+
+# Show the fixed effects
+fixef(fit_income)
+```
+
