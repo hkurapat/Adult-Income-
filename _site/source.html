@@ -8,7 +8,7 @@
 
 <meta name="author" content="Harshil Kurapati">
 
-<title>Income Prediction Based on Race and Gender</title>
+<title>Income Prediction Based on Race and Gender - Sources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Visual Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./source.html"> 
+    <a class="nav-link active" href="./source.html" aria-current="page"> 
 <span class="menu-text">Sources</span></a>
   </li>  
   <li class="nav-item">
@@ -121,10 +121,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
-  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link active" data-scroll-target="#sources">Sources</a>
+  <ul class="collapse">
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
+  <li><a href="#dataset-details" id="toc-dataset-details" class="nav-link" data-scroll-target="#dataset-details">Dataset Details</a></li>
+  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -133,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Income Prediction Based on Race and Gender</h1>
+<h1 class="title">Sources</h1>
 </div>
 
 
@@ -156,32 +158,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This project explores the impact of race and gender on income using a Bayesian Regression Model. By examining these demographic factors, we can gain insights into how they influence income levels.</p>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
+<p>The dataset used in this analysis is the <strong>Adult Census Income</strong> dataset, which can be found on Kaggle. This dataset includes demographic information and income levels for adults in the United States. It was originally extracted from the 1994 Census database.</p>
 </section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>The dataset contains demographic information such as race, gender, age, education, and income level. We will focus on race and gender as key predictors of income, applying a Bayesian Regression Model to estimate the relationship.</p>
+<section id="dataset-details" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-details">Dataset Details</h3>
+<ul>
+<li><strong>Title</strong>: Adult Census Income</li>
+<li><strong>Source</strong>: Kaggle</li>
+<li><strong>Link</strong>: <a href="https://www.kaggle.com/datasets/lovishbansal123/adult-census-income">Adult Census Income Dataset on Kaggle</a></li>
+<li><strong>Description</strong>: The dataset includes the following variables: age, workclass, education, marital status, occupation, relationship, race, sex, hours per week, native country, and income level. The primary goal is to predict whether an individual’s income exceeds $50K per year based on these attributes.</li>
+<li><strong>Usage</strong>: This dataset was used to explore the impact of race and gender on income and to build predictive models to estimate income levels.</li>
+</ul>
 </section>
-<section id="visualization" class="level2">
-<h2 class="anchored" data-anchor-id="visualization">Visualization</h2>
-<p>The following ridge plot shows the distribution of income by race and gender, with overlaid median income levels to provide a point of reference for comparison.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="takeaway" class="level2">
-<h2 class="anchored" data-anchor-id="takeaway">Takeaway</h2>
-<p>The analysis reveals that both race and gender significantly influence income levels, with disparities evident across different racial groups and between genders. These findings highlight persistent inequalities in income distribution, underscoring the need for further exploration and potential policy interventions to address these disparities.</p>
+<section id="citation" class="level3">
+<h3 class="anchored" data-anchor-id="citation">Citation</h3>
+<p>If you use this dataset in your work, please cite it as follows:</p>
+<p>Bansal, Lovish. “Adult Census Income.” Kaggle, 2020. https://www.kaggle.com/datasets/lovishbansal123/adult-census-income.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Harshil Kurapati">
 
-<title>Income Prediction Based on Race and Gender</title>
+<title>Income Prediction Based on Race and Gender - About</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -102,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Sources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -121,10 +121,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
-  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway">Takeaway</a></li>
+  <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link active" data-scroll-target="#about-this-project">About This Project</a>
+  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#about-the-dataset" id="toc-about-the-dataset" class="nav-link" data-scroll-target="#about-the-dataset">About the Dataset</a></li>
+  <li><a href="#about-the-author" id="toc-about-the-author" class="nav-link" data-scroll-target="#about-the-author">About the Author</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -133,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Income Prediction Based on Race and Gender</h1>
+<h1 class="title">About</h1>
 </div>
 
 
@@ -156,32 +159,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This project explores the impact of race and gender on income using a Bayesian Regression Model. By examining these demographic factors, we can gain insights into how they influence income levels.</p>
+<section id="about-this-project" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-project">About This Project</h2>
+<p>This website explores the impact of race and gender on income using the Adult Census Income dataset. The data provides insights into how various demographic factors influence income levels.</p>
+<section id="project-overview" class="level3">
+<h3 class="anchored" data-anchor-id="project-overview">Project Overview</h3>
+<p>The objective of this project is to analyze and visualize the data to uncover patterns and insights into income distribution across different races and genders. The following sections cover:</p>
+<ul>
+<li><strong>Home</strong>: Introduction to the website and an overview of the project with examples and visuals.</li>
+<li><strong>Visual Analysis</strong>: Methods used to analyze the data with various models and visualizations.</li>
+<li><strong>Sources</strong>: Information about the origin of the data and its contents.</li>
+<li><strong>About</strong>: Details about the project and the author.</li>
+</ul>
 </section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>The dataset contains demographic information such as race, gender, age, education, and income level. We will focus on race and gender as key predictors of income, applying a Bayesian Regression Model to estimate the relationship.</p>
+<section id="about-the-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="about-the-dataset">About the Dataset</h3>
+<p>The dataset contains demographic information and income levels for adults in the United States. It includes the following columns:</p>
+<ul>
+<li><strong>age</strong>: Age of the individual</li>
+<li><strong>workclass</strong>: Type of work (e.g., Private, Self-emp-not-inc, etc.)</li>
+<li><strong>fnlwgt</strong>: Final weight, used for statistical adjustments</li>
+<li><strong>education</strong>: Highest level of education achieved</li>
+<li><strong>education-num</strong>: Number of years of education</li>
+<li><strong>marital-status</strong>: Marital status of the individual</li>
+<li><strong>occupation</strong>: Type of occupation</li>
+<li><strong>relationship</strong>: Relationship status (e.g., Husband, Not-in-family, etc.)</li>
+<li><strong>race</strong>: Race of the individual</li>
+<li><strong>sex</strong>: Gender of the individual</li>
+<li><strong>capital-gain</strong>: Capital gains</li>
+<li><strong>capital-loss</strong>: Capital losses</li>
+<li><strong>hours-per-week</strong>: Hours worked per week</li>
+<li><strong>native-country</strong>: Country of origin</li>
+<li><strong>income</strong>: Income level (&lt;=50K or &gt;50K)</li>
+</ul>
 </section>
-<section id="visualization" class="level2">
-<h2 class="anchored" data-anchor-id="visualization">Visualization</h2>
-<p>The following ridge plot shows the distribution of income by race and gender, with overlaid median income levels to provide a point of reference for comparison.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="about-the-author" class="level3">
+<h3 class="anchored" data-anchor-id="about-the-author">About the Author</h3>
+<p>I’m Harshil Kurapati, a rising senior in high school with a passion for data science. This project is part of my exploration into demographic data and aims to provide valuable insights into the factors affecting income levels.</p>
+<p>You can find more about my work on <a href="https://github.com/hkurapat">GitHub</a> or reach out to me via email at ckurapat@gmail.com.</p>
 </section>
-<section id="takeaway" class="level2">
-<h2 class="anchored" data-anchor-id="takeaway">Takeaway</h2>
-<p>The analysis reveals that both race and gender significantly influence income levels, with disparities evident across different racial groups and between genders. These findings highlight persistent inequalities in income distribution, underscoring the need for further exploration and potential policy interventions to address these disparities.</p>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
+<p>This project was created as a part of <a href="https://bootcamp.davidkane.info">Kane’s Data Science Bootcamp</a>, where I learned essential skills in data analysis and visualization to tackle real-world challenges.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -11,9 +11,9 @@ website:
       - text: "Visual Analysis"
         href: 01-modeling.qmd
       - text: "Sources"
-        href: 02-modeling.qmd
+        href: source.qmd
       - text: "About"
-        href: 03-modeling.qmd
+        href: about.qmd
 
 format:
   html:
