@@ -1,0 +1,12 @@
+---
+title: "Model Results"
+format: html
+---
+
+# Model Summary
+
+
+```{r}
+# Summary of the model
+summary(fit_income)
+```
