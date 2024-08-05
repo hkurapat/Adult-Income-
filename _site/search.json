@@ -117,5 +117,19 @@
     "title": "About",
     "section": "",
     "text": "This website explores the impact of race and gender on income using the Adult Census Income dataset. The data provides insights into how various demographic factors influence income levels.\n\n\nThe objective of this project is to analyze and visualize the data to uncover patterns and insights into income distribution across different races and genders. The following sections cover:\n\nHome: Introduction to the website and an overview of the project with examples and visuals.\nVisual Analysis: Methods used to analyze the data with various models and visualizations.\nSources: Information about the origin of the data and its contents.\nAbout: Details about the project and the author.\n\n\n\n\nThe dataset contains demographic information and income levels for adults in the United States. It includes the following columns:\n\nage: Age of the individual\nworkclass: Type of work (e.g., Private, Self-emp-not-inc, etc.)\nfnlwgt: Final weight, used for statistical adjustments\neducation: Highest level of education achieved\neducation-num: Number of years of education\nmarital-status: Marital status of the individual\noccupation: Type of occupation\nrelationship: Relationship status (e.g., Husband, Not-in-family, etc.)\nrace: Race of the individual\nsex: Gender of the individual\ncapital-gain: Capital gains\ncapital-loss: Capital losses\nhours-per-week: Hours worked per week\nnative-country: Country of origin\nincome: Income level (&lt;=50K or &gt;50K)\n\n\n\n\nI’m Harshil Kurapati, a rising senior in high school with a passion for data science. This project is part of my exploration into demographic data and aims to provide valuable insights into the factors affecting income levels.\nYou can find more about my work on GitHub or reach out to me via email at ckurapat@gmail.com.\n\n\n\nThis project was created as a part of Kane’s Data Science Bootcamp, where I learned essential skills in data analysis and visualization to tackle real-world challenges."
+  },
+  {
+    "objectID": "model.html",
+    "href": "model.html",
+    "title": "Visual Analysis",
+    "section": "",
+    "text": "In this section, we explore various models and visualizations to understand the impact of race and gender on income."
+  },
+  {
+    "objectID": "model.html#visual-analysis",
+    "href": "model.html#visual-analysis",
+    "title": "Visual Analysis",
+    "section": "",
+    "text": "In this section, we explore various models and visualizations to understand the impact of race and gender on income."
   }
 ]

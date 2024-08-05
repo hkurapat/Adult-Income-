@@ -9,7 +9,7 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Visual Analysis"
-        href: 01-modeling.qmd
+        href: model.qmd
       - text: "Sources"
         href: source.qmd
       - text: "About"
