@@ -64,4 +64,5 @@ ggplot(data, aes(x = race, fill = income)) +
         panel.grid.minor.x = element_blank())
 ```
 
-
+## Takeaway
+The analysis reveals that both race and gender significantly influence income levels, with disparities evident across different racial groups and between genders. These findings highlight persistent inequalities in income distribution, underscoring the need for further exploration and potential policy interventions to address these disparities.
