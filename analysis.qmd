@@ -19,7 +19,11 @@ suppressPackageStartupMessages({
 })
 ```
 
-```{r}
 
-```
+# Introduction
+
+This project explores the relationship between race, gender, and income using a Bayesian regression model. The data is based on a census dataset, and we aim to understand how these factors influence income levels.
+
+The analysis was conducted using the `brms` package in R, and the results are presented below.
+
 

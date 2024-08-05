@@ -1,0 +1,19 @@
+---
+title: "Data Summary"
+format: html
+---
+
+```{r}
+# Load necessary libraries
+library(tidyverse)
+
+# Load the data
+data <- read_csv("adult.csv")
+
+# Summarize the data
+summary(data)
+
+# Display the first few rows
+head(data)
+```
+
