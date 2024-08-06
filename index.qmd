@@ -1,0 +1,68 @@
+---
+title: "Income Prediction Based on Race and Gender"
+author: "Harshil Kurapati"
+format: html
+execute: 
+  echo: false    
+  warning: false 
+  message: false 
+---
+
+```{r}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(primer.data)
+  library(brms)
+  library(tidybayes)
+  library(gtsummary)
+  library(ggridges)
+})
+```
+
+## Introduction
+
+This project explores the impact of race and gender on income using a Bayesian Regression Model. By examining these demographic factors, we can gain insights into how they influence income levels.
+
+## Overview
+
+The dataset contains demographic information such as race, gender, age, education, and income level. We will focus on race and gender as key predictors of income, applying a Bayesian Regression Model to estimate the relationship.
+
+## Visualization
+
+The following ridge plot shows the distribution of income by race and gender, with overlaid median income levels to provide a point of reference for comparison.
+
+```{r}
+#|cache: true
+# Load libraries
+library(tidyverse)
+library(ggridges)
+library(tidybayes)
+
+# Load the dataset
+data <- read.csv('adult.csv')
+
+# Data preparation
+data <- data %>%
+  mutate(income = ifelse(income == " <=50K", "Less than 50K", "More than 50K"),
+         race = factor(race, levels = c("White", "Black", "Asian-Pac-Islander", "Amer-Indian-Eskimo", "Other")),
+         sex = factor(sex, levels = c("Male", "Female")))
+
+# Dodged bar plot
+ggplot(data, aes(x = race, fill = income)) + 
+  geom_bar(position = position_dodge(width = 0.8), aes(y = ..prop.., group = income), width = 0.7) +
+  facet_wrap(~ sex) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_fill_manual(values = c("#F8766D", "#00BFC4")) +
+  labs(title = "Income Distribution by Race and Gender", 
+       x = "Race",
+       y = "Percentage",
+       fill = "Income Level") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "top",
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank())
+```
+
+## Takeaway
+The analysis reveals that both race and gender significantly influence income levels, with disparities evident across different racial groups and between genders. These findings highlight persistent inequalities in income distribution, underscoring the need for further exploration and potential policy interventions to address these disparities.

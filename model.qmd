@@ -1,0 +1,38 @@
+---
+title: "Visual Analysis"
+author: "Harshil Kurapati"
+format: html
+execute: 
+  echo: false    
+  warning: false 
+  message: false 
+---
+
+## Visual Analysis
+
+In this section, we explore various models and visualizations to understand the impact of race and gender on income.
+
+```{r setup, include=FALSE}
+#| cache: true
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(brms)
+  library(tidybayes)
+  library(ggridges)
+})
+
+# Load the dataset
+data <- read_csv('adult.csv')
+
+# Data preparation
+data <- data %>%
+  mutate(income = ifelse(income == " <=50K", "Less than 50K", "More than 50K"),
+         income_numeric = ifelse(income == "Less than 50K", 0, 1),
+         race = factor(race, levels = c("White", "Black", "Asian-Pac-Islander", "Amer-Indian-Eskimo", "Other")),
+         sex = factor(sex, levels = c("Male", "Female")))
+```
+
+
+
+
+
