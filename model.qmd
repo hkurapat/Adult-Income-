@@ -1,38 +1,31 @@
 ---
-title: "Visual Analysis"
-author: "Harshil Kurapati"
+title: "Bayesian Regression Model"
 format: html
-execute: 
-  echo: false    
-  warning: false 
-  message: false 
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-## Visual Analysis
+## Model Overview
 
-In this section, we explore various models and visualizations to understand the impact of race and gender on income.
+In this section, we present the details of the Bayesian Regression Model used to analyze the impact of race and gender on income levels. We fit the model using the `brms` package and provide the parameter estimates along with their confidence intervals.
 
-```{r setup, include=FALSE}
-#| cache: true
-suppressPackageStartupMessages({
-  library(tidyverse)
-  library(brms)
-  library(tidybayes)
-  library(ggridges)
-})
+## Mathematical Formulation
 
-# Load the dataset
-data <- read_csv('adult.csv')
+The model uses a logistic regression framework to predict the probability \( \pi_i \) of income being above 50K. The logistic function is given by:
 
-# Data preparation
-data <- data %>%
-  mutate(income = ifelse(income == " <=50K", "Less than 50K", "More than 50K"),
-         income_numeric = ifelse(income == "Less than 50K", 0, 1),
-         race = factor(race, levels = c("White", "Black", "Asian-Pac-Islander", "Amer-Indian-Eskimo", "Other")),
-         sex = factor(sex, levels = c("Male", "Female")))
-```
+\[
+\pi_i = \frac{1}{1 + \exp\left(-( \beta_0 + \beta_1 \text{Race}_i + \beta_2 \text{Sex}_i )\right)}
+\]
 
+where:
+- \( \beta_0 \) is the intercept,
+- \( \beta_1 \) is the coefficient for race,
+- \( \beta_2 \) is the coefficient for sex.
 
+## Fitting the Model
 
+The Bayesian Regression Model was fitted using the `brms` package with the following code:
 
 

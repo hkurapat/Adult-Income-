@@ -1,130 +1,39 @@
-/* Global Styles */
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #003366; /* Dark blue background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border-bottom: 2px solid #002244; /* Slightly darker border for separation */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #003366;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-top: 0;
-}
-
-h2 {
-    font-size: 2em;
-    border-bottom: 2px solid #003366;
-    padding-bottom: 5px;
-}
-
-h3 {
-    font-size: 1.75em;
-}
-
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Code Blocks */
-pre {
-    background-color: #272822;
-    color: #f8f8f2;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-    font-size: 0.9em;
-}
-
-code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f4f4f4;
-    padding: 2px 4px;
-    border-radius: 3px;
-}
-
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 0.9em;
-    background-color: #f4f4f4;
-}
-
-table th, table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-table th {
-    background-color: #003366;
+.navbar a {
     color: white;
+    text-decoration: none;
+    padding: 8px 15px;
     font-weight: bold;
 }
 
-table tr:hover {
-    background-color: #f1f1f1;
+.navbar a:hover {
+    background-color: #002244; /* Slightly darker blue on hover */
+    border-radius: 5px;
 }
 
-/* Plots and Visualizations */
-.plot-container {
-    margin: 20px 0;
-}
-
-.plot-title {
-    color: #003366;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.axis-text {
-    font-size: 0.9em;
-    color: #333;
-}
-
-.legend-title {
-    font-weight: bold;
-    color: #003366;
-}
-
-/* Headers */
+/* Title Section Styles */
 .header-container {
-    margin-bottom: 40px;
+    background-color: #0056b3; /* Blue background */
+    color: white; /* White text */
+    padding: 20px;
     text-align: center;
+    border-bottom: 4px solid #003366; /* Darker blue border */
 }
 
-.header-title {
-    font-size: 2em;
-    color: #003366;
-    margin-bottom: 5px;
+.header-container h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
-.header-author {
+.header-container p {
     font-size: 1.2em;
-    color: #666;
-}
-
-/* Footer */
-.footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    text-align: center;
-    font-size: 0.8em;
-    color: #999;
+    margin-top: 10px;
 }

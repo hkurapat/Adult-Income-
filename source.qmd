@@ -1,6 +1,5 @@
 ---
 title: "Sources"
-author: "Harshil Kurapati"
 format: html
 execute: 
   echo: false    
@@ -8,7 +7,6 @@ execute:
   message: false 
 ---
 
-## Sources
 
 ### Data Source
 
@@ -22,9 +20,21 @@ The dataset used in this analysis is the **Adult Census Income** dataset, which 
 - **Description**: The dataset includes the following variables: age, workclass, education, marital status, occupation, relationship, race, sex, hours per week, native country, and income level. The primary goal is to predict whether an individual's income exceeds $50K per year based on these attributes.
 - **Usage**: This dataset was used to explore the impact of race and gender on income and to build predictive models to estimate income levels.
 
+### Data Cleaning and Preparation
+
+The data cleaning process involved the following steps:
+1. **Handling Missing Values**: Any missing values in the dataset were handled appropriately. Missing categorical data were filled using the most frequent value, while missing numerical data were filled using the median value.
+2. **Removing Outliers**: Outliers in numerical variables were identified and removed to ensure a robust analysis.
+3. **Encoding Categorical Variables**: Categorical variables were encoded using appropriate techniques such as one-hot encoding for nominal variables and ordinal encoding for ordinal variables.
+4. **Feature Engineering**: New features were created based on existing variables to enhance the predictive power of the models.
+5. **Splitting the Data**: The data was split into training and testing sets to evaluate the performance of the predictive models.
+
+### Observations Removed
+
+During the data cleaning process, observations with missing values that could not be imputed were removed. Additionally, observations identified as outliers were removed to ensure the robustness of the analysis.
+
 ### Citation
 
 If you use this dataset in your work, please cite it as follows:
-
 
 Bansal, Lovish. "Adult Census Income." Kaggle, 2020. https://www.kaggle.com/datasets/lovishbansal123/adult-census-income.

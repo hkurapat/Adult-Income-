@@ -7,15 +7,14 @@ execute:
   message: false 
 ---
 
-## About Me
+## Welcome!
 
-I’m Harshil Kurapati, a rising senior in high school with a passion for data science. You can find more about my work on [GitHub](https://github.com/hkurapat) or reach out to me via email at [ckurapat@gmail.com](mailto:ckurapat@gmail.com).
+I’m Harshil Kurapati, a rising senior in high school with a deep interest in data science. This project is part of my exploration into how race and gender impact income levels. You can explore more of my work on [GitHub](https://github.com/hkurapat) or contact me via [email](mailto:ckurapat@gmail.com).
 
-## About This Project
+### Project Overview
 
-This project explores the impact of race and gender on income using a Bayesian Regression Model. You can view the project's code and documentation on its [GitHub repository](https://github.com/hkurapat/income-prediction).
+This analysis delves into the demographic factors influencing income, utilizing a Bayesian Regression Model. The full project code and documentation are available on [GitHub](https://github.com/hkurapat/income-prediction).
 
-## Acknowledgements
+### Acknowledgements
 
-This project was created as part of [Kane’s Data Science Bootcamp](https://bootcamp.davidkane.info/), where I have been developing essential skills in data analysis and visualization.
-
+This project was developed as part of [Kane’s Data Science Bootcamp](https://bootcamp.davidkane.info/), where I've honed my skills in data analysis and visualization.

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harshil Kurapati">
 
-<title>Income Prediction Based on Race and Gender - Visual Analysis</title>
+<title>Income Prediction Based on Race and Gender - Bayesian Regression Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +120,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#visual-analysis" id="toc-visual-analysis" class="nav-link active" data-scroll-target="#visual-analysis">Visual Analysis</a></li>
+  <li><a href="#model-overview" id="toc-model-overview" class="nav-link active" data-scroll-target="#model-overview">Model Overview</a></li>
+  <li><a href="#mathematical-formulation" id="toc-mathematical-formulation" class="nav-link" data-scroll-target="#mathematical-formulation">Mathematical Formulation</a></li>
+  <li><a href="#fitting-the-model" id="toc-fitting-the-model" class="nav-link" data-scroll-target="#fitting-the-model">Fitting the Model</a></li>
   </ul>
 </nav>
     </div>
@@ -130,19 +131,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Visual Analysis</h1>
+<h1 class="title">Bayesian Regression Model</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Harshil Kurapati </p>
-          </div>
-  </div>
     
   
     
@@ -153,9 +148,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="visual-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="visual-analysis">Visual Analysis</h2>
-<p>In this section, we explore various models and visualizations to understand the impact of race and gender on income.</p>
+<section id="model-overview" class="level2">
+<h2 class="anchored" data-anchor-id="model-overview">Model Overview</h2>
+<p>In this section, we present the details of the Bayesian Regression Model used to analyze the impact of race and gender on income levels. We fit the model using the <code>brms</code> package and provide the parameter estimates along with their confidence intervals.</p>
+</section>
+<section id="mathematical-formulation" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-formulation">Mathematical Formulation</h2>
+<p>The model uses a logistic regression framework to predict the probability ( _i ) of income being above 50K. The logistic function is given by:</p>
+<p>[ _i = ]</p>
+<p>where: - ( _0 ) is the intercept, - ( _1 ) is the coefficient for race, - ( _2 ) is the coefficient for sex.</p>
+</section>
+<section id="fitting-the-model" class="level2">
+<h2 class="anchored" data-anchor-id="fitting-the-model">Fitting the Model</h2>
+<p>The Bayesian Regression Model was fitted using the <code>brms</code> package with the following code:</p>
 
 
 </section>
