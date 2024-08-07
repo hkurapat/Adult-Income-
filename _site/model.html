@@ -120,9 +120,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#model-overview" id="toc-model-overview" class="nav-link active" data-scroll-target="#model-overview">Model Overview</a></li>
-  <li><a href="#mathematical-formulation" id="toc-mathematical-formulation" class="nav-link" data-scroll-target="#mathematical-formulation">Mathematical Formulation</a></li>
-  <li><a href="#fitting-the-model" id="toc-fitting-the-model" class="nav-link" data-scroll-target="#fitting-the-model">Fitting the Model</a></li>
+  <li><a href="#mathematical-formula" id="toc-mathematical-formula" class="nav-link active" data-scroll-target="#mathematical-formula">Mathematical Formula</a></li>
+  <li><a href="#loading-the-data" id="toc-loading-the-data" class="nav-link" data-scroll-target="#loading-the-data">Loading the Data</a></li>
   </ul>
 </nav>
     </div>
@@ -148,19 +147,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="model-overview" class="level2">
-<h2 class="anchored" data-anchor-id="model-overview">Model Overview</h2>
-<p>In this section, we present the details of the Bayesian Regression Model used to analyze the impact of race and gender on income levels. We fit the model using the <code>brms</code> package and provide the parameter estimates along with their confidence intervals.</p>
+<section id="mathematical-formula" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-formula">Mathematical Formula</h2>
+<p>The mathematical formula for our Bayesian Regression Model is based on logistic regression. The formula for logistic regression can be expressed as:</p>
+<p>[ () = _0 + _1 _i + _2 _i ]</p>
+<p>Where:</p>
+<ul>
+<li>( p ) is the probability of having an income above 50K,</li>
+<li>( _i ) and ( _i ) are the predictor variables (race and sex),</li>
+<li>( _0 ) is the intercept (log-odds of the baseline group),</li>
+<li>( _1 ) and ( _2 ) are the coefficients associated with race and sex, respectively.</li>
+</ul>
+<p>To obtain the probability of having an income above 50K, we apply the inverse logit (also known as the logistic function):</p>
+<p>[ p = ]</p>
 </section>
-<section id="mathematical-formulation" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-formulation">Mathematical Formulation</h2>
-<p>The model uses a logistic regression framework to predict the probability ( _i ) of income being above 50K. The logistic function is given by:</p>
-<p>[ _i = ]</p>
-<p>where: - ( _0 ) is the intercept, - ( _1 ) is the coefficient for race, - ( _2 ) is the coefficient for sex.</p>
-</section>
-<section id="fitting-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="fitting-the-model">Fitting the Model</h2>
-<p>The Bayesian Regression Model was fitted using the <code>brms</code> package with the following code:</p>
+<section id="loading-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="loading-the-data">Loading the Data</h2>
+<p>Ensure that your dataset is loaded and available in the data frame format:</p>
 
 
 </section>

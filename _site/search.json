@@ -53,7 +53,7 @@
     "href": "model.html",
     "title": "Bayesian Regression Model",
     "section": "",
-    "text": "In this section, we present the details of the Bayesian Regression Model used to analyze the impact of race and gender on income levels. We fit the model using the brms package and provide the parameter estimates along with their confidence intervals."
+    "text": "The mathematical formula for our Bayesian Regression Model is based on logistic regression. The formula for logistic regression can be expressed as:\n[ () = _0 + _1 _i + _2 _i ]\nWhere:\n\n( p ) is the probability of having an income above 50K,\n( _i ) and ( _i ) are the predictor variables (race and sex),\n( _0 ) is the intercept (log-odds of the baseline group),\n( _1 ) and ( _2 ) are the coefficients associated with race and sex, respectively.\n\nTo obtain the probability of having an income above 50K, we apply the inverse logit (also known as the logistic function):\n[ p = ]"
   },
   {
     "objectID": "model.html#visual-analysis",
@@ -124,5 +124,19 @@
     "title": "Bayesian Regression Model",
     "section": "Fitting the Model",
     "text": "Fitting the Model\nThe Bayesian Regression Model was fitted using the brms package with the following code:"
+  },
+  {
+    "objectID": "model.html#mathematical-formula",
+    "href": "model.html#mathematical-formula",
+    "title": "Bayesian Regression Model",
+    "section": "",
+    "text": "The mathematical formula for our Bayesian Regression Model is based on logistic regression. The formula for logistic regression can be expressed as:\n[ () = _0 + _1 _i + _2 _i ]\nWhere:\n\n( p ) is the probability of having an income above 50K,\n( _i ) and ( _i ) are the predictor variables (race and sex),\n( _0 ) is the intercept (log-odds of the baseline group),\n( _1 ) and ( _2 ) are the coefficients associated with race and sex, respectively.\n\nTo obtain the probability of having an income above 50K, we apply the inverse logit (also known as the logistic function):\n[ p = ]"
+  },
+  {
+    "objectID": "model.html#loading-the-data",
+    "href": "model.html#loading-the-data",
+    "title": "Bayesian Regression Model",
+    "section": "Loading the Data",
+    "text": "Loading the Data\nEnsure that your dataset is loaded and available in the data frame format:"
   }
 ]

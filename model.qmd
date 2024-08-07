@@ -7,25 +7,90 @@ execute:
   message: false
 ---
 
-## Model Overview
+## Mathematical Formula
 
-In this section, we present the details of the Bayesian Regression Model used to analyze the impact of race and gender on income levels. We fit the model using the `brms` package and provide the parameter estimates along with their confidence intervals.
-
-## Mathematical Formulation
-
-The model uses a logistic regression framework to predict the probability \( \pi_i \) of income being above 50K. The logistic function is given by:
+The mathematical formula for our Bayesian Regression Model is based on logistic regression. The formula for logistic regression can be expressed as:
 
 \[
-\pi_i = \frac{1}{1 + \exp\left(-( \beta_0 + \beta_1 \text{Race}_i + \beta_2 \text{Sex}_i )\right)}
+\log\left(\frac{p}{1 - p}\right) = \beta_0 + \beta_1 \text{Race}_i + \beta_2 \text{Sex}_i
 \]
 
-where:
-- \( \beta_0 \) is the intercept,
-- \( \beta_1 \) is the coefficient for race,
-- \( \beta_2 \) is the coefficient for sex.
+Where:
 
-## Fitting the Model
+- \( p \) is the probability of having an income above 50K,
+- \( \text{Race}_i \) and \( \text{Sex}_i \) are the predictor variables (race and sex),
+- \( \beta_0 \) is the intercept (log-odds of the baseline group),
+- \( \beta_1 \) and \( \beta_2 \) are the coefficients associated with race and sex, respectively.
 
-The Bayesian Regression Model was fitted using the `brms` package with the following code:
+To obtain the probability of having an income above 50K, we apply the inverse logit (also known as the logistic function):
+
+\[
+p = \frac{1}{1 + \exp\left(-( \beta_0 + \beta_1 \text{Race}_i + \beta_2 \text{Sex}_i )\right)}
+\]
+
+## Loading the Data
+
+Ensure that your dataset is loaded and available in the data frame format:
+
+```{r}
+#| echo: true
+# Load necessary library
+library(tidyverse)
+
+# Load the dataset
+data <- read.csv('path/to/your/adult.csv')
+
+# Data preparation
+data <- data %>%
+  mutate(income = ifelse(income == " <=50K", "Less than 50K", "More than 50K"),
+         race = factor(race, levels = c("White", "Black", "Asian-Pac-Islander", "Amer-Indian-Eskimo", "Other")),
+         sex = factor(sex, levels = c("Male", "Female")))
+```
+
+
+```{r}
+#| echo: true
+# Load necessary library
+library(brms)
+
+# Fit the Bayesian Regression Model
+fit_model <- brm(
+  formula = income ~ race + sex,
+  data = x, 
+                  family = gaussian(), 
+                  refresh = 0, 
+                  silent = 2, 
+                  seed = 9)
+)
+```
+
+
+```{r}
+#| echo: true
+# Load necessary libraries
+library(broom.mixed)
+library(dplyr)
+library(gt)
+
+# Extract fixed effects
+model_summary <- fixef(fit_model)
+
+# Convert to a data frame for display
+model_summary_df <- as.data.frame(model_summary)
+model_summary_df <- model_summary_df %>%
+  dplyr::rename(
+    Term = term,
+    Estimate = estimate,
+    `Est.Error` = std.error,
+    `Q2.5` = `l-95% CI`,
+    `Q97.5` = `u-95% CI`
+  )
+
+# Display the parameter estimates table
+model_summary_df %>%
+  gt() %>%
+  tab_header(title = "Parameter Estimates from Bayesian Regression Model")
+```
+
 
 
